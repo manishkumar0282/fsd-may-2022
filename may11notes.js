@@ -276,11 +276,9 @@ eg: power(2,4)
 2*2*2*2
 2^4
 
-2. Find if string is palindrome
+2. Reverse a string
+fucntion reverse("man"){
 
-aba
-abbbbba
-aaaaa
-a
-mama
+}
+"nam"
 */

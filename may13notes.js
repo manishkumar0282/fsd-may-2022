@@ -167,3 +167,4 @@ console.log(printNthFib(2));
 console.log(printNthFib(3));
 console.log(printNthFib(6));
 console.log(printNthFib(8));
+

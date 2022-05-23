@@ -168,9 +168,22 @@ let objSort = [{
 }
 ];
 
-objSort.sort((a,b) => (a.id - b.id));
-console.log(objSort);
+// objSort.sort((a,b) => (a.id - b.id));
+// console.log(objSort);
 
 let arrAnkit= [1,2,30,40,4,5,60];
 result= arrAnkit.sort((a,b) => (a - b));
 console.log(result);
+
+// For Shivam
+for(let i=0; i<objSort.length; i++){
+    for(j=i+1; j< objSort.length; j++) {
+        if(objSort[i].id > objSort[j].id) {
+            temp = objSort[j];
+            objSort[j] = objSort[i];
+            objSort[i] = temp;
+        }
+    }
+}
+console.log(objSort);
+

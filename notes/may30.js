@@ -2,7 +2,7 @@ console.log("Probblem solving--- Array---");
 /*
 sparse array 
 
-sparse matrix -> number of zeros is atleast more than 50%
+sparse matrix -> number of zeros is atleast more than 50% of array values
 3*3 matrix -> 3*3 = 9 atleast 5 should be zero
 4*5 matrix = 5*5 = 20 atleast 11 should be zero
 
@@ -182,9 +182,22 @@ console.log("checkIfReverseSubarraySortsArray "+checkIfReverseSubarraySortsArray
 
 /*
 Longest Consecutive subsequence
-input 35,3,4,88,9,10,21,5,6
-outut - 3,4,5,6
+input 35,3,4,88,9,10,21,5,6,36
+outut - 3,4,5,6,9,10,21,35,36,88
+
 length = 4
+
+
+.... scan the array from left 
+c = arr[0] = 35
+c+1 ==> 35+1 = 36
+c-1 ==> 35-1 = 34
+4 3 1 2
+
+current = next - 1
+current+1 = next
+
+// 1,2 10,11 45,46,47
 */
 
 function findLongestConsecutiveSequence(arr) {
@@ -192,11 +205,14 @@ function findLongestConsecutiveSequence(arr) {
     let answer = 0;
 
     arr.sort(function(a,b) {return a-b;});
+
     console.log(arr);
 
     let temp = [];
     temp.push(arr[0]);
-
+    // 3,4,5,6,9,10,21,35,36,88
+    // [4,2,2]
+    // max = arr[0]... if(arr[i]>max)-> max = arr[i];
     for(let i=1; i<arr.length; i++) {
         if(arr[i] != arr[i+1]) {
             temp.push(arr[i]);

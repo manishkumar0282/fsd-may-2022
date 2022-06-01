@@ -209,11 +209,11 @@ function findLongestConsecutiveSequence(arr) {
     console.log(arr);
 
     let temp = [];
-    temp.push(arr[0]);
+    // temp.push(arr[0]);
     // 3,4,5,6,9,10,21,35,36,88
     // [4,2,2]
     // max = arr[0]... if(arr[i]>max)-> max = arr[i];
-    for(let i=1; i<arr.length; i++) {
+    for(let i=0; i<arr.length; i++) {
         if(arr[i] != arr[i+1]) {
             temp.push(arr[i]);
         }
@@ -232,5 +232,5 @@ function findLongestConsecutiveSequence(arr) {
 }
 
 console.log("findLongestConsecutiveSequence ");
-let lcsArray = [35,3,4,88,9,10,21,5,6];
+let lcsArray = [35,3,4,88,9,10,3,4,21,5,6];
 console.log(findLongestConsecutiveSequence(lcsArray));

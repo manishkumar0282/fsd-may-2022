@@ -114,19 +114,19 @@ function sortArray(arr) {
     console.log(arr.sort());
 }
 
-const readline1 = require("readline");
-const rl = readline1.createInterface({
+const readFromConsole = require("readline");
+const rl123 = readFromConsole.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
 
 let myArray;
 
-rl.question("Enter first number ", (num1) => {
-    rl.question("Enter second number ", (num2) => {
+rl123.question("Enter first number ", (num1) => {
+    rl123.question("Enter second number ", (num2) => {
         let res = parseFloat(num1)+parseFloat(num2);
         console.log("Result is : ",res);
-        rl.close();
+        rl123.close();
     });
 });
 

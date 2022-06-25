@@ -23,16 +23,13 @@ console.log(numberOfWays(8));
 
 function printSubsequenes(arr, i, result) {
     if(i == arr.length) {
-        if(result.length > 0) {
-            console.log(result);
-        }
+        if(result.length > 0) console.log(result);
     } else {
         printSubsequenes(arr, i+1, result);
         result.push(arr[i]);
         printSubsequenes(arr, i+1, result);
         result.pop();
     }
-
     return;
 }
 

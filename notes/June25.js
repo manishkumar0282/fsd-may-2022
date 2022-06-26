@@ -52,14 +52,18 @@ insert 2
 */
 function lexOrder(temp, n, res) {
     if(temp > n) {
+        console.log("Temp = has gone beyond "+ temp +" n= "+n);
         return;
     }
+    console.log("before pushing temp= "+ temp +" result= "+res);
     res.push(temp);
+    console.log("before pushing temp= "+ temp +" result= "+res);
     lexOrder(temp*10, n, res);
     if(temp % 10 != 9) {
         // temp = 10 
         //temp%10 = 0
+        console.log("calling lex from inside modulo condition with temp= "+ temp +" result= "+res);
         lexOrder(temp+1, n, res);
     }
 }
-printLex(25);
+printLex(15);

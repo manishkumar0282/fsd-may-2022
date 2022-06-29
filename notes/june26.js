@@ -69,4 +69,5 @@ function lexOrder(temp, n, res) {
         lexOrder(temp+1, n, res);
     }
 }
+console.log("Lex");
 printLex(15);
